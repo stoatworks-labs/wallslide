@@ -47,3 +47,35 @@ then drive them with `osascript`. Findings worth keeping:
   which cannot be wrong, and by an optional pattern slide that draws it.
 - **Font embedding.** Licence-encumbered, and Mac PowerPoint ignores it.
 - **SMPTE RP 219.** Its value is exact colour; a deck is not an exact-colour path.
+
+## Deployment, 2026-08-27
+
+Live at **wallslide.stoatworks-labs.com**, deployed from this machine with
+`cf-run npx wrangler deploy`. The custom domain is declared in `wrangler.toml` as a
+`custom_domain` route rather than clicked into the dashboard — a small divergence from
+aspect-calc and blend-calc, taken so a deploy re-asserts the hostname and the repo answers
+"where does this live" on its own.
+
+Declaring `routes` without `workers_dev` disables the `*.workers.dev` URL, which wrangler
+warns about. That is the intended outcome: the tool has a real hostname and does not need a
+second one.
+
+Verified on production: HTTP 200, the `_headers` CSP applied, React mounted, and a deck
+generated end to end in the browser under that CSP — 27 entries, 4 slides, 2 canvas-rendered
+pattern PNGs, `<p:sldSz cx="36576000" cy="10287000"/>`.
+
+### One console error on production is not ours
+
+Every page on the zone carries a blocked-inline-script CSP error:
+
+```
+Executing inline script violates ... 'script-src 'self''
+```
+
+It is Cloudflare's own bot-detection bootstrap
+(`/cdn-cgi/challenge-platform/scripts/jsd/main.js`), injected into every HTML response and
+blocked by the strict CSP. **aspect-calc and test-card do exactly the same thing** — checked
+— so this is a fleet-wide, pre-existing condition, not something this repo introduced. The
+app is unaffected; Cloudflare's signal simply does not collect. Fixing it means either
+turning that feature off for the zone or adding a hash to the CSP, and it affects every site
+on the account, so it is not a decision to take inside one repo.

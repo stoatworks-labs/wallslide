@@ -18,5 +18,16 @@
 name = "wallslide"
 compatibility_date = "2026-07-30"
 
+# The custom domain is declared HERE rather than clicked into the dashboard, which
+# is a small divergence from aspect-calc and blend-calc. Declaring it means a
+# deploy re-asserts the hostname and the DNS record, so the mapping cannot drift
+# away from the repo — and the repo answers "where does this live" on its own.
+#
+# Fleet convention: a real tool that does its work in the visitor's browser gets
+# the bare name; only recorded click-through demos take a `-demo` suffix.
+routes = [
+  { pattern = "wallslide.stoatworks-labs.com", custom_domain = true }
+]
+
 [assets]
 directory = "./dist"

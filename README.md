@@ -14,6 +14,8 @@
 > measured.** The slide is the right size; what a playback machine and a processor do with
 > the picture is not something this can tell you.
 
+**Live at [wallslide.stoatworks-labs.com](https://wallslide.stoatworks-labs.com)** — nothing to install.
+
 Type an LED wall's resolution. Get a PowerPoint template that is actually the right size,
 themed with the event's own colours, fonts, logo and background — and, if you want one, a
 deck of test patterns rendered at the wall's exact raster.
