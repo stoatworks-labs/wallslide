@@ -158,6 +158,36 @@ the real applications. The unit tests prove the package is a well-formed ZIP of 
 XML; they cannot prove PowerPoint will open it, and the gap between those two statements is
 where every OOXML bug lives.
 
+<!-- selfhost:start -->
+## Run your own copy
+
+Wallslide is a static page, so hosting it yourself is one container serving
+the built files — the same files the hosted copy serves, running somewhere that
+still works when the venue has no internet.
+
+**Docker.** The image is built by this repo's `docker.yml` workflow on every
+push and published as `ghcr.io/stoatworks-labs/wallslide`:
+
+```bash
+docker run -d --name wallslide --restart unless-stopped -p 8543:80 ghcr.io/stoatworks-labs/wallslide:latest
+```
+
+Or `docker compose up -d` with the [`docker-compose.yml`](docker-compose.yml)
+in this repo, which maps the same port. Either way it is then at
+`http://localhost:8543/`.
+
+**Unraid.** Search Community Applications for *Wallslide* — the template is
+[`templates/wallslide.xml`](https://github.com/stoatworks-labs/stoatworks-unraid/blob/main/templates/wallslide.xml)
+in [stoatworks-unraid](https://github.com/stoatworks-labs/stoatworks-unraid), which is what the CA feed reads.
+
+**Stoatworks Burrow** lists it under *Self-hosted*, with the compose file a
+click away.
+
+The `Dockerfile`, `docker-compose.yml`, `docker/` and the workflow are
+generated from `fleet.json` in stoatworks-unraid. Change them there and
+regenerate rather than editing them here.
+<!-- selfhost:end -->
+
 ## Licence
 
 MIT. See [LICENSE](LICENSE).
