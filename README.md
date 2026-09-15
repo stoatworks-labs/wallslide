@@ -23,6 +23,10 @@ deck of test patterns rendered at the wall's exact raster.
 Everything happens in the browser. There is no backend, so a client's unannounced logo has
 nowhere to be uploaded to.
 
+![Wallslide with a 3840 × 1080 wall entered and the slide size, type scale and Keynote setup it produces](docs/screenshots/wallslide.png)
+
+<sub>The hosted tool as it opens: a 3840 × 1080 wall at 96 dpi becomes a 40″ × 11.25″ slide at full size with a 3.00× type scale, the safe-area and theme controls sit under it, the slide is previewed on the right, and the Keynote document setup (2880 × 810 pt) is worked out alongside.</sub>
+
 ---
 
 ## The problem it exists for
