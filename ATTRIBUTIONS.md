@@ -1,59 +1,25 @@
 # Attributions
 
-wallslide is built on other people's work. This file lists what that work is, who did
-it, and what it is doing here.
+## Vendored source
 
-It is generated — the master lists live in the `stoatworks-backend` repo and are
-pushed out by `scripts/sync-attributions.py`. Edit it there, not here.
+- **`src/lib/slides.ts`** — from [Aspect Calc](https://github.com/stoatworks-labs/aspect-calc),
+  MIT, same author. One edit: the `Problem` import points at this repo's `problem.ts`.
+- **`src/lib/zip.ts`** and **`src/lib/__tests__/zip.test.ts`** — from
+  [Test Card](https://github.com/stoatworks-labs/test-card), MIT, same author. Unmodified.
 
-## Third-party code this project uses
+## Specifications
 
-Libraries, SDKs and frameworks the project is built on or bundles.
+- **ECMA-376** (Office Open XML), Parts 1 and 2 — the PresentationML part graph, the
+  relationship types, `ST_SlideSizeCoordinate`'s 914400–51206400 EMU range, and OPC's
+  permission to store package members uncompressed.
+- **PKWARE APPNOTE 6.3.x** — the ZIP structures, via test-card's writer.
+- **WCAG 2.1** — the relative-luminance and contrast-ratio formulae in `colour.ts`.
 
-### Tauri
+## Measured, not cited
 
-<https://tauri.app>  
-Licence: MIT or Apache-2.0  
-Copyright: The Tauri Programme within The Commons Conservancy
+Keynote's 200–8192 pt slide range was obtained by driving a real Keynote until it refused,
+and is quoted from its own error text. It appears in no documentation I could find.
 
-A Cargo and npm dependency — of the app itself under src-tauri/, or of the desktop launcher under launcher/src-tauri/.
+## Runtime dependencies
 
-Wraps a web front end in a native desktop app using the platform's own webview rather than a bundled browser, so the binary stays small.
-
-### React
-
-<https://react.dev>  
-Licence: MIT  
-Copyright: Meta Platforms, Inc. and affiliates
-
-An npm dependency.
-
-The UI layer for the browser tools and the Electron and Tauri front ends.
-
-### The Rust crate ecosystem
-
-<https://crates.io>  
-Licence: predominantly MIT or Apache-2.0  
-Copyright: the individual crate authors
-
-Cargo dependencies, resolved and pinned in Cargo.lock.
-
-Async runtimes, protocol codecs, serialisation and GUI toolkits. The exact set and versions for any build are in that repo's Cargo.lock, which is the authoritative list.
-
-### The npm ecosystem
-
-<https://www.npmjs.com>  
-Licence: predominantly MIT  
-Copyright: the individual package authors
-
-npm dependencies, resolved and pinned in the lockfile.
-
-Build tooling, test runners and the libraries the front ends are assembled from. The exact set and versions for any build are in that repo's lockfile, which is the authoritative list.
-
-The full transitive dependency set for any build is pinned in this repo's lockfile,
-which is the authoritative list. What is named above is the layers a reader would
-want to know about, not every package that has ever been resolved.
-
-## Getting this wrong
-
-If your work is here and the description is inaccurate, the licence is wrong, or you would rather not be listed — open an issue and it will be fixed.
+React and React DOM (MIT). Nothing else ships to the browser.
