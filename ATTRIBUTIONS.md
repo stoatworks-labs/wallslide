@@ -23,3 +23,7 @@ and is quoted from its own error text. It appears in no documentation I could fi
 ## Runtime dependencies
 
 React and React DOM (MIT). Nothing else ships to the browser.
+
+The desktop builds wrap it in the launcher in `launcher/`, built on
+[Tauri](https://tauri.app) (MIT or Apache-2.0); its Rust crates are pinned in
+`launcher/src-tauri/Cargo.lock`.
