@@ -99,9 +99,9 @@ of a logo.
 
 ## Two kinds of test pattern, and the difference matters
 
-Most patterns diagnose **the wall**. Two diagnose **the chain**:
+Most patterns diagnose **the wall**. One diagnoses **the chain**:
 
-> **Pixel check**: a 1 px checkerboard and line bursts. If this comes out as flat grey,
+> **Pixel check**: a 1 px checkerboard. If this comes out as flat grey,
 > something between PowerPoint and the panels is scaling. That's worth knowing, and it's
 > **not a fault in the wall.**
 
