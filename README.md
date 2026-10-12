@@ -9,8 +9,9 @@
 > untitled presentation, as a template should. Text picked to break things came back through
 > the XML unharmed, and a full-bleed picture measured 2880 × 810 pt against a 2880 × 810 pt
 > slide. Keynote's own slide limits were **measured by asking Keynote** until it refused, not
-> taken from documentation. Every XML part is parsed by `xmllint` in CI. **No deck made with
-> this has been played out to a real LED processor or wall and measured.** The slide is the
+> taken from documentation. Every XML part is parsed by `xmllint` when the tests run on my
+> Mac; the CI runner hasn't got `xmllint`, so that one check is skipped there. **No deck made
+> with this has been played out to a real LED processor or wall and measured.** The slide is the
 > right size; what a playback machine and a processor do with the picture is something this
 > can't tell you.
 
