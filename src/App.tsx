@@ -568,7 +568,8 @@ export default function App() {
         <span>
           Slide sizing from{' '}
           <a href="https://github.com/stoatworks-labs/aspect-calc">Aspect Calc</a>; ZIP writer from{' '}
-          <a href="https://github.com/stoatworks-labs/test-card">Test Card</a>.
+          <a href="https://github.com/stoatworks-labs/test-card">Test Card</a>.{' '}
+          <a href="https://stoatworks-labs.com/web-tools/wallslide/" target="_blank" rel="noopener">More about Wallslide</a>.
         </span>
         <span className="spacer" />
         <span className="dim">{typeof __APP_VERSION__ === 'string' ? __APP_VERSION__ : ''}</span>

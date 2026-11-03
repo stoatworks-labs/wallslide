@@ -1,0 +1,15 @@
+# Wallslide
+
+> PowerPoint and Keynote templates sized for an LED wall
+
+Makes correctly sized, themed PowerPoint templates and test decks for an LED wall. Type in the wall's resolution and it works out a slide the application will actually accept. PowerPoint caps a slide edge at 56 inches, in the file schema itself, so there's no arguing with it, and a 7680 × 1080 wall wants an 80-inch slide it won't make. The answer is to build at half size and export at 2×, and the build scale is always a whole number or a whole reciprocal, because “build at half and export at 200%” is an instruction a person can follow at 2 a.m. and “build at 1/2.37” isn't. Keynote's limits are different, and were measured by asking Keynote until it refused: 8192 pt against PowerPoint's 4032, so Keynote holds the same wall at 1:1 without any fuss. Themes carry the event's own colours, fonts, logo and background, and the optional test deck draws its patterns at the wall's exact raster. It all happens in the browser. There's no backend, so a client's unannounced logo has nowhere to be uploaded to.
+
+It's a Stoatworks Labs web tool: free, and it runs in a web browser.
+
+## Links
+
+- [Wallslide, the app](https://wallslide.stoatworks-labs.com/): runs in the browser, free
+- [Project page](https://stoatworks-labs.com/software/wallslide/)
+- [Web tool page](https://stoatworks-labs.com/web-tools/wallslide/)
+- [Source on GitHub](https://github.com/stoatworks-labs/wallslide)
+- [Self-hosting](https://stoatworks-labs.com/web-tools/self-hosting/): run it on your own server

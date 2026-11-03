@@ -7,7 +7,7 @@
     <title>Wallslide — PowerPoint and Keynote templates sized for an LED wall</title>
     <meta
       name="description"
-      content="Type an LED wall's resolution and get a correctly sized PowerPoint template — theme colours, fonts, logo and slide master included — plus a test deck of diagnostic patterns. Handles PowerPoint's 56-inch slide limit and Keynote's different one. Runs entirely in your browser."
+      content="Type in an LED wall's resolution and get a correctly sized, themed PowerPoint template and a test deck, inside PowerPoint's 56-inch slide limit. Free, and it runs in your browser."
     />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230d1b2a'/%3E%3Crect x='4' y='8' width='24' height='16' rx='1.5' fill='none' stroke='%234cc9f0' stroke-width='2'/%3E%3Crect x='7.5' y='11.5' width='9' height='2.4' fill='%234cc9f0'/%3E%3Crect x='7.5' y='16' width='17' height='1.6' fill='%2393a8bd'/%3E%3Crect x='7.5' y='19' width='13' height='1.6' fill='%2393a8bd'/%3E%3C/svg%3E" />
     <link rel="canonical" href="https://wallslide.stoatworks-labs.com/">
@@ -16,13 +16,45 @@
     <meta property="og:locale" content="en_GB">
     <meta property="og:url" content="https://wallslide.stoatworks-labs.com/">
     <meta property="og:title" content="Wallslide — PowerPoint and Keynote templates sized for an LED wall">
-    <meta property="og:description" content="Type an LED wall's resolution and get a correctly sized, branded PowerPoint template plus a test deck. Handles PowerPoint's 56-inch slide limit and Keynote's different one. Nothing is uploaded.">
+    <meta property="og:description" content="Type in an LED wall's resolution and get a correctly sized, themed PowerPoint template and a test deck, inside PowerPoint's 56-inch slide limit. Free, and it runs in your browser.">
     <meta property="og:image" content="https://stoatworks-labs.com/thumbs/wallslide.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1280">
     <meta property="og:image:height" content="720">
     <meta property="og:image:alt" content="Wallslide — PowerPoint and Keynote templates sized for an LED wall">
     <meta name="twitter:card" content="summary_large_image">
+    <!-- One entity with the tool's page on stoatworks-labs.com: same @id there. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "@id": "https://wallslide.stoatworks-labs.com#app",
+        "name": "Wallslide",
+        "url": "https://wallslide.stoatworks-labs.com",
+        "description": "Type in an LED wall's resolution and get a correctly sized, themed PowerPoint template and a test deck, inside PowerPoint's 56-inch slide limit. Free, and it runs in your browser.",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Any (runs in a web browser)",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "GBP"
+        },
+        "author": {
+          "@id": "https://stoatworks-labs.com/#organization",
+          "@type": "Organization",
+          "name": "Stoatworks Labs",
+          "url": "https://stoatworks-labs.com/"
+        },
+        "publisher": {
+          "@id": "https://stoatworks-labs.com/#organization"
+        },
+        "sameAs": [
+          "https://stoatworks-labs.com/web-tools/wallslide/",
+          "https://github.com/stoatworks-labs/wallslide"
+        ]
+      }
+    </script>
     <meta name="twitter:image" content="https://stoatworks-labs.com/thumbs/wallslide.png">
     <meta name="theme-color" content="#0d1b2a" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0d1b2a" media="(prefers-color-scheme: dark)" />
@@ -31,6 +63,17 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   </head>
   <body>
+    <noscript>
+      <h1>Wallslide</h1>
+      <p>PowerPoint and Keynote templates sized for an LED wall.</p>
+      <p>Makes correctly sized, themed PowerPoint templates and test decks for an LED wall. Type in the wall's resolution and it works out a slide the application will actually accept. PowerPoint caps a slide edge at 56 inches, in the file schema itself, so there's no arguing with it, and a 7680 × 1080 wall wants an 80-inch slide it won't make. The answer is to build at half size and export at 2×, and the build scale is always a whole number or a whole reciprocal, because “build at half and export at 200%” is an instruction a person can follow at 2 a.m. and “build at 1/2.37” isn't. Keynote's limits are different, and were measured by asking Keynote until it refused: 8192 pt against PowerPoint's 4032, so Keynote holds the same wall at 1:1 without any fuss. Themes carry the event's own colours, fonts, logo and background, and the optional test deck draws its patterns at the wall's exact raster. It all happens in the browser. There's no backend, so a client's unannounced logo has nowhere to be uploaded to.</p>
+      <p>Wallslide runs in the browser and needs JavaScript.</p>
+      <ul>
+        <li><a href="https://stoatworks-labs.com/software/wallslide/">Wallslide on stoatworks-labs.com</a></li>
+        <li><a href="https://github.com/stoatworks-labs/wallslide">Source on GitHub</a></li>
+        <li><a href="https://stoatworks-labs.com/web-tools/self-hosting/">Running it on your own server</a></li>
+      </ul>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     <!--

@@ -24,6 +24,8 @@ also get a deck of test patterns rendered at the wall's native raster.
 Everything happens in the browser. There's no backend, so a client's unannounced logo has
 nowhere to be uploaded to.
 
+There's more on [its page at stoatworks-labs.com](https://stoatworks-labs.com/web-tools/wallslide/), along with [notes on running it on your own server](https://stoatworks-labs.com/web-tools/self-hosting/).
+
 ![Wallslide with a 3840 × 1080 wall entered and the slide size, type scale and Keynote setup it produces](docs/screenshots/wallslide.png)
 
 <sub>The hosted tool as it opens: a 3840 × 1080 wall at 96 dpi becomes a 40″ × 11.25″ slide at full size with a 3.00× type scale, the safe-area and theme controls sit under it, the slide is previewed on the right, and the Keynote document setup (2880 × 810 pt) is worked out alongside.</sub>
