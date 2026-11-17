@@ -204,9 +204,9 @@ export default function App() {
 
   return (
     <div className="app">
-      <header className="topbar">
+      <header className="topbar sw-bar">
         <div className="brand">
-          <strong>Wallslide</strong>
+          <strong className="sw-brand"><span className="sw-mark" aria-hidden="true">◰</span> Wallslide</strong>
           <span className="brand__sub">PowerPoint templates sized for an LED wall</span>
         </div>
         <div className="spacer" />
@@ -221,6 +221,11 @@ export default function App() {
         />
         <button className="primary" onClick={generate} disabled={busy || !slide || !!fatal}>
           {busy ? 'Building…' : 'Download'}
+        </button>
+        {/* Opens the shared About dialog — see public/about.js, which delegates
+            this attribute from the document, so nothing needs importing here. */}
+        <button type="button" data-stoatworks-about>
+          About
         </button>
       </header>
 

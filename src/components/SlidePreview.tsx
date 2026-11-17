@@ -76,7 +76,7 @@ export function SlidePreview({
 
   return (
     <figure className="preview">
-      <svg viewBox={`0 0 ${VW} ${VH}`} className="preview__svg" role="img"
+      <svg viewBox={`0 0 ${VW} ${VH}`} className="preview__svg sw-stage" role="img"
         aria-label={`Slide preview, ${wall.widthPx} by ${wall.heightPx} pixels`}>
         <rect x={0} y={0} width={VW} height={VH} fill={bg} />
         {brand.background ? (
